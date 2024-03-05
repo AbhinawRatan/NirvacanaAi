@@ -7,6 +7,10 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@editorjs/editorjs": "^2.29.0",
+    "@editorjs/header": "^2.8.1",
+    "@editorjs/list": "^1.9.0",
+    "@editorjs/simple-image": "^1.6.0",
     "@tailwindcss/forms": "^0.5.3",
     "aos": "^3.0.0-beta.6",
     "react": "^18.2.0",
