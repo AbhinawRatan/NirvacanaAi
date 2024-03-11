@@ -1,15 +1,19 @@
-import React from 'react'
-import Editor from '../partials/Editor'
+import React from 'react';
+import Editor from '../partials/Editor';
+import Header from '../partials/Header';
+import Footer from '../partials/Footer';
 
 const Playground = () => {
   return (
-    <div className="min-h-screen bg-gray-100 py-10 px-5 md:px-10">
-     <h2 className='text-2xl font-bold text-gray-800 mb-5'>Playground</h2>
-     <div className="editor-wrapper bg-white p-5 shadow rounded-lg">
+    <>
+      <Header />
+      <div className="min-h-screen bg-gray-100 py-10 px-5 md:px-10">
+        <h2 className='text-3xl font-bold text-gray-800 mb-10 text-center'>Playground</h2>
         <Editor />
-     </div>
-    </div>
-  )
-}
+      </div>
+      <Footer />
+    </>
+  );
+};
 
 export default Playground;

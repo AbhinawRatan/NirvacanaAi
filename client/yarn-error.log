@@ -1,5 +1,5 @@
 Arguments: 
-  C:\Program Files\nodejs\node.exe C:\Users\abhig\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add editorjs-checklist
+  C:\Program Files\nodejs\node.exe C:\Users\abhig\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add @editorjs/Marker
 
 PATH: 
   C:\Program Files\PowerShell\7;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Python310\Scripts\;C:\Python310\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\MinGW\bin;C:\ProgramData\chocolatey\bin;C:\Users\abhig\AppData\Local\Android\sdk\platforms;C:\Users\abhig\AppData\Local\Android\sdk\platform-tools;C:\Users\abhig\Documents\Android\platform-tools;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\dotnet\;C:\Program Files\Git\cmd;C:\Program Files\Git LFS;C:\Program Files\Docker\Docker\resources\bin;C:\Program Files\Go\bin;C:\Program Files\nodejs\;C:\Program Files\PowerShell\7\;C:\Users\abhig\.cargo\bin;C:\Users\abhig\.local\share\solana\install\active_release\bin;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\abhig\AppData\Local\Microsoft\WindowsApps;C:\Users\abhig\AppData\Local\Programs\Microsoft VS Code\bin;C:\src\flutter\flutter\bin;C:\Program Files\JetBrains\PyCharm Community Edition 2021.3.3\bin;C:\Users\abhig\AppData\Local\Microsoft\WindowsApps;C:\Users\abhig\AppData\Local\GitHubDesktop\bin;C:\Users\abhig\AppData\Local\Programs\Fiddler;C:\Users\abhig\go\bin;C:\Users\abhig\AppData\Roaming\npm
@@ -14,7 +14,7 @@ Platform:
   win32 x64
 
 Trace: 
-  Error: https://registry.yarnpkg.com/editorjs-checklist: Not found
+  Error: https://registry.yarnpkg.com/@editorjs%2fMarker: Not found
       at params.callback [as _callback] (C:\Users\abhig\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:66145:18)
       at self.callback (C:\Users\abhig\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:140890:22)
       at Request.emit (node:events:518:28)
@@ -36,12 +36,20 @@ npm manifest:
       "preview": "vite preview"
     },
     "dependencies": {
+      "@editorjs/checklist": "^1.6.0",
+      "@editorjs/delimiter": "^1.4.0",
       "@editorjs/editorjs": "^2.29.0",
+      "@editorjs/embed": "^2.7.0",
       "@editorjs/header": "^2.8.1",
+      "@editorjs/inline-code": "^1.5.0",
       "@editorjs/list": "^1.9.0",
+      "@editorjs/marker": "^1.4.0",
+      "@editorjs/quote": "^2.6.0",
       "@editorjs/simple-image": "^1.6.0",
+      "@editorjs/table": "^2.3.0",
       "@tailwindcss/forms": "^0.5.3",
       "aos": "^3.0.0-beta.6",
+      "dotenv": "^16.4.5",
       "react": "^18.2.0",
       "react-dom": "^18.2.0",
       "react-flatpickr": "^3.10.13",
@@ -300,15 +308,46 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/@codexteam/icons/-/icons-0.0.6.tgz#5553ada48dddf5940851ccc142cfe17835c36ad3"
     integrity sha512-L7Q5PET8PjKcBT5wp7VR+FCjwCi5PUp7rd/XjsgQ0CI5FJz0DphyHGRILMuDUdCW2MQT9NHbVr4QP31vwAkS/A==
   
+  "@codexteam/icons@^0.3.0":
+    version "0.3.0"
+    resolved "https://registry.yarnpkg.com/@codexteam/icons/-/icons-0.3.0.tgz#62380b4053d487a257de443864b5c72dafab95e6"
+    integrity sha512-fJE9dfFdgq8xU+sbsxjH0Kt8Yeatw9xHBJWb77DhRkEXz3OCoIS6hrRC1ewHEryxzIjxD8IyQrRq2f+Gz3BcmA==
+  
+  "@editorjs/checklist@^1.6.0":
+    version "1.6.0"
+    resolved "https://registry.yarnpkg.com/@editorjs/checklist/-/checklist-1.6.0.tgz#f3e501b0422917ca78fd08cb51578098a26a1823"
+    integrity sha512-hRNP36DInr73mSK3noHBQeoQb7DA12ANfqTXufEkTgQzx+k4mRJ0HdeGukTIR4JbwjHJ9ecUBnnQqIEGnxCFEg==
+    dependencies:
+      "@codexteam/icons" "^0.3.0"
+  
+  "@editorjs/delimiter@^1.4.0":
+    version "1.4.0"
+    resolved "https://registry.yarnpkg.com/@editorjs/delimiter/-/delimiter-1.4.0.tgz#328c1072f0d462b3f15b1a22421c8621e065cd3a"
+    integrity sha512-i1Wm3UQsVisM7Fh9focJ1a4kX2l7IxO3zrEd+GmYoPVaNwxb/63GLNbGfCCGZBuvUyzeUDnc8cdhD1QQGwUZIg==
+    dependencies:
+      "@codexteam/icons" "^0.0.5"
+  
   "@editorjs/editorjs@^2.29.0":
     version "2.29.0"
     resolved "https://registry.yarnpkg.com/@editorjs/editorjs/-/editorjs-2.29.0.tgz#1c9846af19b2afab62a6bb3a815641721c0587f1"
     integrity sha512-w2BVboSHokMBd/cAOZn0UU328o3gSZ8XUvFPA2e9+ciIGKILiRSPB70kkNdmhHkuNS3q2px+vdaIFaywBl7wGA==
   
+  "@editorjs/embed@^2.7.0":
+    version "2.7.0"
+    resolved "https://registry.yarnpkg.com/@editorjs/embed/-/embed-2.7.0.tgz#9bd368d0e55656dad7c7b5453033ff77aa2458bc"
+    integrity sha512-FieA8YKnqAMX+4Ng6VeusuuuyMg1cX4vADoEKcQVM0LHy2hC17ztNGZh8UHEfrjUwbfJDSr/cPhT0LRGrwTd8g==
+  
   "@editorjs/header@^2.8.1":
     version "2.8.1"
     resolved "https://registry.yarnpkg.com/@editorjs/header/-/header-2.8.1.tgz#ba16f43aaf461aa920c3594bdf0d854c4b5119b9"
     integrity sha512-y0HVXRP7m2W617CWo3fsb5HhXmSLaRpb9GzFx0Vkp/HEm9Dz5YO1s8tC7R8JD3MskwoYh7V0hRFQt39io/r6hA==
+    dependencies:
+      "@codexteam/icons" "^0.0.5"
+  
+  "@editorjs/inline-code@^1.5.0":
+    version "1.5.0"
+    resolved "https://registry.yarnpkg.com/@editorjs/inline-code/-/inline-code-1.5.0.tgz#ad5849bac3396b9dad22dceeda76198dd991e426"
+    integrity sha512-5i6BCOG8eOg4/6qGoLJuL6XSZZg834zIByDW8K80doM1L7ss/VqtLY0nrB2Q5bfs1KA0tOlVHOfjE4JD4438FQ==
     dependencies:
       "@codexteam/icons" "^0.0.5"
   
@@ -319,10 +358,31 @@ Lockfile:
     dependencies:
       "@codexteam/icons" "^0.0.4"
   
+  "@editorjs/marker@^1.4.0":
+    version "1.4.0"
+    resolved "https://registry.yarnpkg.com/@editorjs/marker/-/marker-1.4.0.tgz#c5553c54ced70d28502fb47f2dbc7d50c53fc88e"
+    integrity sha512-5ipEXfL44jTTRzgNp/p/YjMO7jT08S5z4V8qA3FFJTfdhKgQyM3mvP1zpdYKw47ZZpVWMCncvk5Nto3BxihEtg==
+    dependencies:
+      "@codexteam/icons" "^0.0.5"
+  
+  "@editorjs/quote@^2.6.0":
+    version "2.6.0"
+    resolved "https://registry.yarnpkg.com/@editorjs/quote/-/quote-2.6.0.tgz#5ff02b5b3cac1fcea4157c31ac975e3acb3906a8"
+    integrity sha512-8DiCMBT4n4UDV5bgzvfRH26HmL6YWddGC4+twvjhR+PzX0gwrnY8nFifvro79EeSqxwRtFjjlGnu5I0VTfw5aQ==
+    dependencies:
+      "@codexteam/icons" "^0.0.5"
+  
   "@editorjs/simple-image@^1.6.0":
     version "1.6.0"
     resolved "https://registry.yarnpkg.com/@editorjs/simple-image/-/simple-image-1.6.0.tgz#711c3900e17845331d6667cf0fe91793a5557f84"
     integrity sha512-WvdGfQPlozwZd3PXQrJnRXk6gEYbv1U2vRupYJ6lTd3/UsLInXYUX5jSFcnGB5ZMH3bd0JDZfcb4d4Sv1/1big==
+    dependencies:
+      "@codexteam/icons" "^0.0.6"
+  
+  "@editorjs/table@^2.3.0":
+    version "2.3.0"
+    resolved "https://registry.yarnpkg.com/@editorjs/table/-/table-2.3.0.tgz#cc8bc762d9a13caa15e005c060bcaac885ffdb4b"
+    integrity sha512-/dKE6A5FkukX/FpvIyQGsewwXglZk8YbXpEp9vkB6Ec4ETLeGJMxObCcYqbXqVod+IU/a1tFH+j3lsD8ASD41g==
     dependencies:
       "@codexteam/icons" "^0.0.6"
   
@@ -747,6 +807,11 @@ Lockfile:
     dependencies:
       "@babel/runtime" "^7.8.7"
       csstype "^3.0.2"
+  
+  dotenv@^16.4.5:
+    version "16.4.5"
+    resolved "https://registry.yarnpkg.com/dotenv/-/dotenv-16.4.5.tgz#cdd3b3b604cb327e286b4762e13502f717cb099f"
+    integrity sha512-ZmdL2rui+eB2YwhsWzjInR8LldtZHGDoQ1ugH85ppHKwpUHL7j7rN0Ti9NCnGiQbhaZ11FpR+7ao1dNsmduNUg==
   
   eastasianwidth@^0.2.0:
     version "0.2.0"
