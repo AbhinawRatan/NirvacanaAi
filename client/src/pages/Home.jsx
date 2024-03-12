@@ -28,8 +28,6 @@ function Home() {
         
 
         <FeaturesBlocks />
-        <Banner />
-
       </main>
 
       <Banner />

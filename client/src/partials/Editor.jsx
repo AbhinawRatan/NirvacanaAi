@@ -1,37 +1,55 @@
-import React, { useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { createReactEditorJS } from 'react-editor-js';
 import { EDITOR_JS_TOOLS } from '../utils/constants';
 
 const ReactEditorJS = createReactEditorJS();
 
 const Editor = () => {
-  const editorCore = useRef(null); // Step 1: Reference to the Editor.js instance
+  const editorCore = useRef(null);
+  const [saving, setSaving] = useState(false); // State to manage saving/loading state
 
   const handleSave = async () => {
+    setSaving(true); // Start saving
     if (editorCore.current) {
       const outputData = await editorCore.current.save();
-      // Here you could alternatively send the data to a server
       localStorage.setItem('editorContent', JSON.stringify(outputData));
-      alert('Content saved!'); // Feedback to the user (optional)
-      console.log('Saved data', outputData); // For demonstration, log the saved data
+      setTimeout(() => { // Simulate network request delay
+        setSaving(false); // Stop saving after the action is done
+        alert('Content saved!');
+      }, 2000); // Adjust time as needed
     }
   };
 
   const handleInitialize = (instance) => {
-    editorCore.current = instance; // Store the editor instance
+    editorCore.current = instance;
   };
 
+  useEffect(() => {
+    const loadContent = async () => {
+      const savedContent = localStorage.getItem('editorContent');
+      if (savedContent && editorCore.current) {
+        await editorCore.current.render(JSON.parse(savedContent));
+      }
+    };
+
+    loadContent();
+  }, []);
+
   return (
-    <div>
-      <ReactEditorJS
-        onInitialize={handleInitialize}
-        tools={EDITOR_JS_TOOLS}
-        defaultValue={{
-          time: Date.now(),
-          blocks: JSON.parse(localStorage.getItem('editorContent'))?.blocks || [],
-        }}
-      />
-      <button onClick={handleSave} style={{ marginTop: '20px' }}>Save Content</button>
+    <div className="relative min-h-screen flex flex-col items-center"> {/* Use flexbox for centering */}
+      <div className="pt-16 w-full"> {/* Ensure the Editor.js occupies the full width */}
+        <ReactEditorJS
+          onInitialize={handleInitialize}
+          tools={EDITOR_JS_TOOLS}
+        />
+      </div>
+      <button 
+        onClick={handleSave} 
+        className={`mt-4 mb-10 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full 
+                    transition-all duration-500 ease-in-out 
+                    ${saving ? 'w-10 h-10 p-0 rounded-full' : 'w-32 h-10 rounded-lg'}`}>
+        {!saving && "Save "} {/* Hide text when saving */}
+      </button>
     </div>
   );
 };
