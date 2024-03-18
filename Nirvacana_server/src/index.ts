@@ -14,7 +14,7 @@ runMiddlewaresForRequest(app);
 setupRouteHandlers(app);
 
 // Define a route to fetch artist data by ID
-app.get('/artists/:artistId', (req, res) => {
+app.get('/users/:artistId', (req, res) => {
   // Get artistId from request parameters
   const artistId = req.params.artistId;
   

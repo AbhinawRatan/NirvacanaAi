@@ -1,7 +1,7 @@
 import { User } from "types";
 import { FirestoreDatabase } from "../implementations/FirestoreDatabaseService"; 
 
-export class ArtistService {
+export class userservice {
   private db: FirestoreDatabase;
 
   constructor() {
@@ -9,22 +9,22 @@ export class ArtistService {
   }
 
   async getArtist(userId: string) {
-    const user: User = await this.db.getDocument("artists", userId);
+    const user: User = await this.db.getDocument("users", userId);
 
     return user;
   }
 
-  async getArtists() {
-    const users: User[] = await this.db.getCollection("artists");
+  async getusers() {
+    const users: User[] = await this.db.getCollection("users");
 
     return users;
   }
 
   async updateArtist(userId: string, data: any) {
-    await this.db.updateDocument("artists", userId, data);
+    await this.db.updateDocument("users", userId, data);
   }
 
   async createArtist(id: string, data: any) {
-    await this.db.addDocument("artists", data, id);
+    await this.db.addDocument("users", data, id);
   }
 }

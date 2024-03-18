@@ -14,7 +14,7 @@ const allRoutes: RouteHandler[] = [
   // Users
   {
     router: artistRouter,
-    route: "/artists",
+    route: "/users",
   },
   // Auth
   {
