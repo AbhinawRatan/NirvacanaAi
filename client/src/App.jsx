@@ -7,7 +7,6 @@ import {
 
 import 'aos/dist/aos.css';
 import './css/style.css';
-import {useVisitorData} from '@fingerprintjs/fingerprintjs-pro-react'
 
 
 import AOS from 'aos';
