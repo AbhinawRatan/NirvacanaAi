@@ -1,6 +1,6 @@
-# Nirvacana AI
+# SemanticPro
 
-Nirvacana AI is a cutting-edge text enhancement tool that leverages artificial intelligence to improve readability, correct grammatical errors, and synthesize concise text summaries. Designed to streamline the editing process, Nirvacana AI provides instant analysis and suggestions to elevate the quality of written content.
+Semantiqpro is a cutting-edge text enhancement tool that leverages artificial intelligence to improve readability, correct grammatical errors, and synthesize concise text summaries. Designed to streamline the editing process, Nirvacana AI provides instant analysis and suggestions to elevate the quality of written content.
 
 ## Features
 
